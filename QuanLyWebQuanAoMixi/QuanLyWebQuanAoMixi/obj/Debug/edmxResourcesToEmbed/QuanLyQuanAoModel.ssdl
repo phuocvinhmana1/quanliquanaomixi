@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyQuanAoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiTietGioHang">
+    <Key>
+      <PropertyRef Name="MaCT" />
+    </Key>
+    <Property Name="MaCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaGioHang" Type="int" />
+    <Property Name="MaSP" Type="int" />
+    <Property Name="SoLuong" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ChiTietSanPham">
+    <Key>
+      <PropertyRef Name="MaChiTietSP" />
+    </Key>
+    <Property Name="MaChiTietSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaSP" Type="int" />
+    <Property Name="KichThuoc" Type="nvarchar" MaxLength="50" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <EntityType Name="FeedbackKH">
+    <Key>
+      <PropertyRef Name="MaFB" />
+    </Key>
+    <Property Name="MaFB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenFB" Type="nvarchar" MaxLength="50" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GioHang">
+    <Key>
+      <PropertyRef Name="MaGioHang" />
+    </Key>
+    <Property Name="MaGioHang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKH" Type="int" />
+    <Property Name="NgayMua" Type="date" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
+    <Property Name="TongTien" Type="money" />
+  </EntityType>
+  <EntityType Name="KhuyenMai">
+    <Key>
+      <PropertyRef Name="MaKM" />
+    </Key>
+    <Property Name="MaKM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenMaKM" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThongTinKM" Type="nvarchar" MaxLength="100" />
+    <Property Name="GiaTienKM" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LoaiSanPham">
+    <Key>
+      <PropertyRef Name="MaLoaiSP" />
+    </Key>
+    <Property Name="MaLoaiSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoaiSP" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QuanLySlider">
+    <Key>
+      <PropertyRef Name="MaSlider" />
+    </Key>
+    <Property Name="MaSlider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSlider" Type="nvarchar" MaxLength="50" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QuanLyThongBao">
+    <Key>
+      <PropertyRef Name="MaThongBao" />
+    </Key>
+    <Property Name="MaThongBao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenThongBao" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="QuanLyVeChungToi">
+    <Key>
+      <PropertyRef Name="MaVCT" />
+    </Key>
+    <Property Name="MaVCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenVCT" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaLoai" Type="int" />
+    <Property Name="SoLuong" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThuongHieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="XuatXu" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayThem" Type="date" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="MauSac" Type="nvarchar" MaxLength="50" />
+    <Property Name="KichThuoc" Type="nvarchar" MaxLength="50" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiaBan" Type="nvarchar" MaxLength="50" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ThongTinTaiKhoan">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoaiTK" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="QuanLyQuanAoModelStoreContainer">
+    <EntitySet Name="ChiTietGioHang" EntityType="Self.ChiTietGioHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietSanPham" EntityType="Self.ChiTietSanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeedbackKH" EntityType="Self.FeedbackKH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GioHang" EntityType="Self.GioHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuanLySlider" EntityType="Self.QuanLySlider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuanLyThongBao" EntityType="Self.QuanLyThongBao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuanLyVeChungToi" EntityType="Self.QuanLyVeChungToi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongTinTaiKhoan" EntityType="Self.ThongTinTaiKhoan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

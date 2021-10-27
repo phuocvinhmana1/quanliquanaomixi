@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyQuanAoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KhuyenMai">
+    <Key>
+      <PropertyRef Name="MaKM" />
+    </Key>
+    <Property Name="MaKM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenMaKM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThongTinKM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTienKM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LoaiSanPham">
+    <Key>
+      <PropertyRef Name="MaLoaiSP" />
+    </Key>
+    <Property Name="MaLoaiSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QuanLyQuanAoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" />
+    <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" />
+    <EntitySet Name="ChiTietGioHang" EntityType="QuanLyQuanAoModel.ChiTietGioHang" />
+    <EntitySet Name="FeedbackKH" EntityType="QuanLyQuanAoModel.FeedbackKH" />
+    <EntitySet Name="QuanLySlider" EntityType="QuanLyQuanAoModel.QuanLySlider" />
+    <EntitySet Name="QuanLyThongBao" EntityType="QuanLyQuanAoModel.QuanLyThongBao" />
+    <EntitySet Name="QuanLyVeChungToi" EntityType="QuanLyQuanAoModel.QuanLyVeChungToi" />
+    <EntitySet Name="SanPham" EntityType="QuanLyQuanAoModel.SanPham" />
+    <EntitySet Name="ThongTinTaiKhoan" EntityType="QuanLyQuanAoModel.ThongTinTaiKhoan" />
+    <EntitySet Name="ChiTietSanPham" EntityType="QuanLyQuanAoModel.ChiTietSanPham" />
+    <EntitySet Name="GioHang" EntityType="QuanLyQuanAoModel.GioHang" />
+  </EntityContainer>
+  <EntityType Name="ChiTietGioHang">
+    <Key>
+      <PropertyRef Name="MaCT" />
+    </Key>
+    <Property Name="MaCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaGioHang" Type="Int32" />
+    <Property Name="MaSP" Type="Int32" />
+    <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FeedbackKH">
+    <Key>
+      <PropertyRef Name="MaFB" />
+    </Key>
+    <Property Name="MaFB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenFB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QuanLySlider">
+    <Key>
+      <PropertyRef Name="MaSlider" />
+    </Key>
+    <Property Name="MaSlider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSlider" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QuanLyThongBao">
+    <Key>
+      <PropertyRef Name="MaThongBao" />
+    </Key>
+    <Property Name="MaThongBao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenThongBao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QuanLyVeChungToi">
+    <Key>
+      <PropertyRef Name="MaVCT" />
+    </Key>
+    <Property Name="MaVCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenVCT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaLoai" Type="Int32" />
+    <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThuongHieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="XuatXu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayThem" Type="DateTime" Precision="0" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaBan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MauSac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KichThuoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ThongTinTaiKhoan">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiTK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChiTietSanPham">
+    <Key>
+      <PropertyRef Name="MaChiTietSP" />
+    </Key>
+    <Property Name="MaChiTietSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSP" Type="Int32" />
+    <Property Name="KichThuoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GioHang">
+    <Key>
+      <PropertyRef Name="MaGioHang" />
+    </Key>
+    <Property Name="MaGioHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKH" Type="Int32" />
+    <Property Name="NgayMua" Type="DateTime" Precision="0" />
+    <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+</Schema>

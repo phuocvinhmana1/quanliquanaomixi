@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="QuanLyWebQuanAoMixi.AdminMasterPage" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="~/Admin/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Admin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Admin/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Admin/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/Admin/bootstrap/js/bootstrap.esm.min.js"></script>
+    <script src="~/Admin/bootstrap/js/bootstrap.esm.js"></script>
+    <script src="~/Admin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="~/Admin/bootstrap/css/bootstrap-utilities.rtl.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-utilities.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-reboot.rtl.min.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-grid.rtl.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-grid.rtl.min.css" rel="stylesheet" />
+    <link href="~/Admin/bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+
+
+
+        <!-- End site branding area -->
+        <div style="width: 1000px; font-weight: bold; font-size: 16px; margin-left: 200px; margin-top: 20px">
+
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Admin/adSanPham/index.aspx">SẢN PHẨM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Admin/adLoaiSanPham/index.aspx">LOẠI SẢN PHẨM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Admin/adThongBao/index.aspx">THÔNG BÁO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Admin/adTaiKhoan/index.aspx">TÀI KHOẢN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Admin/adDonHang/index.aspx">ĐƠN HÀNG</a>
+                </li>
+
+            </ul>
+
+
+        </div>
+        <!-- End mainmenu area -->
+
+        <!-- main content -->
+
+        <!-- main content -->
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="contentadmin1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+
+    </form>
+</body>
+</html>

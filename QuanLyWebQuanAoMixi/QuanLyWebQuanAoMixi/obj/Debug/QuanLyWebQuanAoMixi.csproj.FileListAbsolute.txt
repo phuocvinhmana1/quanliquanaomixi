@@ -1,0 +1,9 @@
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\bin\QuanLyWebQuanAoMixi.dll
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\bin\QuanLyWebQuanAoMixi.pdb
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\obj\Debug\QuanLyWebQuanAoMixi.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\obj\Debug\QuanLyWebQuanAoMixi.dll
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\obj\Debug\QuanLyWebQuanAoMixi.pdb
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\bin\EntityFramework.dll
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\bin\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\bin\EntityFramework.xml
+C:\Users\Lenovo\Desktop\QuanLiWebQuanAoMixi\QuanLyWebQuanAoMixi\QuanLyWebQuanAoMixi\bin\EntityFramework.SqlServer.xml
